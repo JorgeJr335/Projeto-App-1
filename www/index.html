@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <script src="components/loader.js"></script>
   <script src="lib/jquery-3.4.1.min.js"></script>
+  <script src="components/contar.js"></script>
 
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="lib/css/bootstrap.min.css">
@@ -13,23 +14,50 @@
 
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <div class="form-group">
-          <label>Valor 1</label>
-          <input type="number" class="form-control">
-        </div>
-      </div>
-    </div>
-     <div class="row">
-      <div class="col-sm">
-        <div class="form-group">
-          <label>Valor 2</label>
-          <input type="number" class="form-control">
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-sm">
+					<div class="form-group">
+						<label for="valor1">Valor 1: </label>
+						<input type="number" class="form-control" id="valor1">
+					</div>
+					<div class="form-group">
+						<label for="valor2">Valor 2: </label>
+						<input type="number" class="form-control" id="valor2">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<button class="btn btn-primary btn-block" id="sub">-</button>
+				</div>
+				<div class="col-3">
+					<button class="btn btn-success btn-block" id="soma">+</button>
+				</div>
+				<div class="col-3">
+					<button class="btn btn-danger btn-block" id="multi">*</button>
+				</div>
+				<div class="col-3">
+					<button class="btn btn-info btn-block" id="dividir">/</button>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm">
+						<label for="res">Resultado</label><br>
+						<input type="text" class="form-control" readonly id="res">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm">
+						<button class="btn btn-primary btn-block" id="limpar">Limpar</button>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</div>
 </body>
 </html>
